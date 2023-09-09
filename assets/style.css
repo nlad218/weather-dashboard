@@ -1,0 +1,134 @@
+/* Add this CSS to your assets/style.css file */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#search-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#search-section h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+#city-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#search-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+
+#current-weather {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#current-weather h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+#current-weather p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+#forecast {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#forecast h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.forecast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.forecast-item img {
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+#search-history {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#search-history h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+}
+
+#history-list li {
+  font-size: 18px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#history-list li:hover {
+  color: #007bff;
+}
