@@ -39,7 +39,7 @@ async function getCurrentWeather(city) {
   }
 }
 
-// Function to fetch 5-day forecast data
+// Function to fetch 5-day forecast data starting from tomorrow
 async function getForecast(city) {
   try {
     const response = await fetch(
@@ -50,10 +50,21 @@ async function getForecast(city) {
     }
     const data = await response.json();
 
-    // Extract and display 5-day forecast data
-    const forecastData = data.list.slice(0, 5); // Get the first 5 days
+    // Get the current date
+    const currentDate = new Date();
+
+    // Filter and extract forecast data starting from tomorrow
+    const forecastData = data.list.filter((forecast) => {
+      const forecastDate = new Date(forecast.dt * 1000);
+      // Check if the forecast date is after the current date
+      return forecastDate.getDate() !== currentDate.getDate();
+    });
+
+    // Take the first 5 days of the filtered data
+    const fiveDayForecast = forecastData.slice(0, 5);
+
     forecastSection.innerHTML = "<h2>5-Day Forecast</h2>";
-    forecastData.forEach((forecast) => {
+    fiveDayForecast.forEach((forecast) => {
       const date = new Date(forecast.dt * 1000).toLocaleDateString();
       const iconCode = forecast.weather[0].icon;
       const temp = forecast.main.temp;
